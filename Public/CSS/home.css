@@ -1,0 +1,115 @@
+/* style.css */
+*{
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../Images/HomeBackground');
+  background-size: cover;
+}
+
+.logo{
+  height:40px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+.navbars {
+  padding:5px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:goldenrod;  
+}
+
+.navList ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:0!important;
+  margin:0!important;
+}
+.navList ul li{
+  list-style-type: none;
+}
+.navList ul li a{
+  text-decoration: none;
+  margin:0 10px;
+  color:white;
+  font-size: 18px;
+}
+
+
+main {
+  padding: 20px;
+}
+
+.banner {
+  text-align: center;
+  margin-bottom: 20px;
+  color:whitesmoke;
+}
+h3{
+  color: whitesmoke;
+}
+
+.featured-movies {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.featured-movies .movie-card {
+  width: 30%;
+  padding: 20px;
+  background-color: goldenrod;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.featured-movies .movie-card img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.featured-movies .movie-card h4 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.featured-movies h3{
+  color: whitesmoke;
+  
+}
+.featured-movies a{
+  text-decoration: none;
+}
+
+.card-body{
+  height: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-y: auto; 
+  background-color: goldenrod;
+  margin-right: -7px; 
+  padding-right: 17px; 
+}
+
+.card-body h6{
+  color: whitesmoke;
+}
+
+
+
+

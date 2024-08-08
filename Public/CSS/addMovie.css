@@ -1,0 +1,15 @@
+body {
+    background-image: url('/Images/loginbg');
+    background-size: cover;
+}
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:darkgoldenrod;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}

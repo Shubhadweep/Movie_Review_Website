@@ -1,0 +1,32 @@
+.login-container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+}
+.login-form {
+    padding: 2rem;
+    background-color:wheat;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #0000001f;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+button{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+.forgot-password-link {
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+body{
+    background-image: url('../Images/loginbg');
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}

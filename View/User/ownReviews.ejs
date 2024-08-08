@@ -1,0 +1,72 @@
+<%-include('../Includes/header.ejs') -%>
+<link rel="stylesheet" href="/CSS/ownReview.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbars">
+      <!-- <div class="container"> -->
+        <div class="logoPart">         
+            <img src="/Images/logo.png" alt="Logo" class="logo"><h5>RMovies</h5>       
+        </div>
+        <div class="navList">
+          <ul class="nav-links">
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/allMovies">Create Review</a></li>
+            <li><a href="/myProfile">My Profile</a></li>
+            <li>
+              <div class="row">
+                <div class="col-12">
+                  <button class="btn logout-button"> <a href="/logout"> Logout </a></button>
+                </div>    
+              </div>
+            </li>
+          </ul>
+        </div>
+      <div class="serchFormNav">
+        <form class="d-flex" role="search" action="/searchMovie" method="POST">
+          <input class="form-control me-2" name="movieName" type="text" placeholder="Search Your Movie" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+
+    </nav>   
+ 
+  </header>
+
+  <h2>All Your reviews are Here</h2>
+  <%if(allData.length > 0){%>
+    <%for(let obj of allData){%>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2">
+                <img src="/movieImages/<%=obj.allDetails.movieImages[0]%>" alt="Small Image" class="image">
+            </div>
+            <div class="col-10 d-flex align-items-center">
+                <h5>Movie Name: <%=obj.allDetails.movieName%></h5>
+            </div>
+
+            
+              <div class="col-12">
+                  <h6>Your review: </h6><br>
+                  <p class="description"><%=obj.review%></p>
+                  <div class="ratings">
+                    <h6>Ratings: <%=obj.rating%>/5</h6>
+                  </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <button class="btn btn-danger mx- my-2"> <a href="/deleteReview/<%=obj._id%>"> Delete </a></button>
+                <button class="btn btn-primary mx-1 my-2"> <a href="/viewEditPage/<%=obj._id%>"> Edit </a></button>
+              </div>
+          </div>
+        </div>
+        
+        
+    </div>
+    <%}%>
+    <%}else{%>
+      <h2>No Reviews are Avilable</h2>
+      <%}%>
+ 
+
+      <%-include('../Includes/footer.ejs') -%>

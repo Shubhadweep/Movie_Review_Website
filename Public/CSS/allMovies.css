@@ -1,0 +1,49 @@
+body {
+    background-color:darkblue;
+}
+.container2 {
+    margin-top: 50px;
+    
+}
+.container2 h4{
+    color: whitesmoke;
+}
+.card {
+    margin-top: 20px;
+    width: 1000px;
+    margin-bottom: 50px;
+}
+.carousel-item img {
+    
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+.centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+.card-body {
+    text-align: center;
+    background-color: darkgoldenrod;
+    color: black;
+    height: 250px;
+}
+.carousel-item img {
+    max-height: 400px;
+    object-fit: contain;
+}
+.logout-button {
+    display: flex;
+    top: 5px;
+    right: 5px;
+  }
+.container button a{
+    text-decoration: none;
+    color: whitesmoke;
+}

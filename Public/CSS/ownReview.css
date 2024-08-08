@@ -1,0 +1,35 @@
+
+       h2,h6{
+        margin-top: 30px;
+        color: whitesmoke;
+        text-align: center;
+       }
+       .container h4{
+        margin-top: 10px;
+       }
+        body{
+          background-image: url('/Images/HomeBackground');
+          background-size: cover;
+          color:whitesmoke;
+        }
+        .row {
+            margin-bottom: 15px;
+            background-color: goldenrod;
+            border-radius: 10px;
+        }
+        
+        .image {
+            width: 180px;
+            height: 150px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .description {
+            margin-top: 2px;
+        }
+        button a{
+          color: whitesmoke;
+          text-decoration: none;
+        }
+    

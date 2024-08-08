@@ -1,0 +1,42 @@
+<%-include('../Includes/header.ejs')-%>
+ <link rel="stylesheet" href="/CSS/ownReview.css">
+</head>
+<body>
+    <%-include('../Includes/navbar.ejs')-%>
+  <%if(allData.length > 0 ){%>
+    <%for(let obj of allData){%>
+        <h2><i>Most relevant reviews of <%=obj.movieName%></i></h2>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2">
+                <img src="/movieImages/<%=obj.movieImages[0]%>" alt="Small Image" class="image">
+            </div>
+            <div class="col-10 d-flex align-items-center">
+                <h5><i>Movie Name: <%=obj.movieName%></i></h5>
+            </div>
+
+                <%if(reviewData.length > 0){%>
+                    <%for(let obj of reviewData){%>
+                <div class="col-12">
+                    <h4><i>Reviewer: <%=obj.userName%></i></h4>
+                    <h6>Review: </h6><br>
+                    <p class="description"><%=obj.review%></p>
+                    <div class="ratings">
+                      <h4 class="text-secondary"><i>Ratings: <%=obj.rating%>/5</i></h4>
+                    </div>
+                </div><hr>
+                  <%}%>
+               <%}else{%>
+                <h5>No Reviews Are Avilable For this Movie</h5>
+                <%}%>
+            
+        </div>
+    
+    </div>
+    <%}%>
+    <%}else{%>
+      <h2>No Reviews are Avilable</h2>
+      <%}%>
+
+<%-include('../Includes/footer.ejs')-%>
+

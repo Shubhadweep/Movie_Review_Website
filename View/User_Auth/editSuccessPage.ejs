@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f8ff; /* Light background color */
+    }
+    .message-box {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .message-box p {
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #28a745; /* Success message color */
+    }
+    .message-box a{
+        text-decoration: none;
+        color: black
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <p>Your Account Details have been Updated Successfully<br>
+        You need to login with Your updated Details
+    </p>
+    <button class="btn btn-primary"><a href="/login">Log in</a></button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

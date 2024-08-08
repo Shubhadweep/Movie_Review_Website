@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link rel="stylesheet" href="/CSS/home.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('/Images/ProfileBg2');
+      background-size: cover;
+    }
+    .profile-card {
+      background-color: #f8f9fab2; /* Card background color */
+      border: 1px solid #ddd;
+      width: 600px;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 100px;
+      margin-bottom: 120px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .profile-field {
+      font-weight: bold;
+      color: #333;
+    }
+    .profile-card a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    
+  </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbars">
+          <!-- <div class="container"> -->
+            <div class="logoPart">         
+                <img src="/Images/logo.png" alt="Logo" class="logo"> <h5>RMovies</h5>         
+            </div>
+            <div class="navList">
+              <ul class="nav-links">
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/allMovies">Create Review</a></li>
+                <li>
+                    <div class="row">
+                      <div class="col-12">
+                        <button class="btn logout-button"> <a href="/logout"> Logout </a></button>
+                      </div>    
+                    </div>
+                </li>
+              </ul>
+            </div>
+          <div class="serchFormNav">
+            <form class="d-flex" role="search" action="/searchMovie" method="POST">
+              <input class="form-control me-2" name="movieName" type="text" placeholder="Search Your Movie" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+    
+        </nav>   
+     
+      </header>
+
+  <div class="container d-flex justify-content-center">
+    
+    <div class="profile-card">
+      <h2 class="text-center mb-4">Your Profile</h2>
+      
+      <div class="mb-3">
+        <label class="profile-field">Name:</label>
+        <p><%=data.userData.userName%></p>
+      </div>
+      <div class="mb-3">
+        <label class="profile-field">Email ID:</label>
+        <p><%=data.userData.emailId%></p>
+      </div>
+      <div class="mb-4">
+        <label class="profile-field">Contact Number:</label>
+        <p>+91  <%=data.userData.contactNumber%></p>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary mr-2"><a href="/myProfileEdit/<%=data.userData._id%>">Edit</a></button>
+        <button class="btn btn-danger"><a href="/myProfileDelete/<%=data.userData._id%>">Delete</a></button>
+      </div>
+    </div>
+    
+  </div>
+
+  <%-include('../Includes/footer.ejs')-%>
